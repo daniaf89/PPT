@@ -15,11 +15,87 @@
                   integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
                   crossorigin="anonymous">
           </script>
+    <script src="https://use.fontawesome.com/f978b2cae5.js"></script>
   </head>
   <body>
 
+      <div id="jugador">
+        <table>
+          <tr>
+            <td class="casilla"></td> <td class="casilla"></td> <td class="casilla"></td>
+          </tr>
+          <tr>
+            <td class="casilla"></td> <td class="casilla"></td> <td class="casilla"></td>
+          </tr>
+          <tr>
+            <td class="casilla"></td> <td class="casilla"></td> <td class="casilla"></td>
+          </tr>
+        </table>
+      </div>
+
+      <div id="maquina">
+        <table>
+          <tr>
+            <td class="casilla"></td> <td class="casilla"></td> <td class="casilla"></td>
+          </tr>
+          <tr>
+            <td class="casilla"></td> <td class="casilla"></td> <td class="casilla"></td>
+          </tr>
+          <tr>
+            <td class="casilla"></td> <td class="casilla"></td> <td class="casilla"></td>
+          </tr>
+        </table>
+      </div>
+
       <script>
-          
+
+      $(document).ready(function(){
+
+        var maximoBarcos = 2;
+        var disparoM;
+        var barcosColocados =0;
+        var rejilla= $('#maquina td').length;
+
+        function colocarbarcosMaquina(){
+        }
+
+        function jugar(){
+          disparoM = Math.floor(Math.random * rejilla);
+
+          var = $('.jugador .casilla').eq(disparoM): has class ('barco')
+
+
+        }
+
+        $(.casilla).click(function(){
+          barcosColocados++;
+          if (barcosColocados < maximoBarcos )
+          $(this).addClass('barco');
+          else jugar();
+        })
+
+
+
+      });
       </script>
+
+      <style media="screen">
+        body{
+            text-align: center;
+        }
+
+        table{
+          display:inline-block;
+          border:1px solid black;
+        }
+        .casilla{
+          width: 50px;
+          height: 50px;
+          border:1px solid black;
+        }
+        .barco{
+
+        }
+      </style>
   </body>
 </html>
